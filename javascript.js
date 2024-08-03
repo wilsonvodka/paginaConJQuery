@@ -10,7 +10,15 @@ $(document).ready(function(){
 
     $('#boton').css({'color' : 'blue', 'background-color' : 'yellow'});
     // $('#boton').css('background-color', 'yellow');
-    
+
+    // $('#subcontenedor').remove();
+    // $('#subcontenedor').hide();
+
+    $('img').attr({'src' : 'logo2.png', 'width': '400px'});
+    // $('img').attr('width', '300px');
+
+
+
 });
 
 
