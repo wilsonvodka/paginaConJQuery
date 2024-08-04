@@ -1,16 +1,34 @@
 $(document).ready(function(){
-   // https://github.com/harvesthq/chosen/releases
-//    $('.chosen-select').chosen({no_results_text:"no hay que diga: "});
+    $('#fecha').daterangepicker({
+        locale:{
+            format:"YYYY-MM-DD hh:mm:ss"
+        },
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(48,'hour')
 
-    // $('.chosen-select').chosen({disable_search_threshold:11})
+    },function(inicio,fin){
+        console.log(inicio.format("YYYY-MM-DD hh:mm:ss") + " - "+fin.format("YYYY-MM-DD hh:mm:ss"));
+    });
+    $('#fecha2').daterangepicker({
+        locale:{
+            format:"YYYY-MM-DD hh:mm:ss"
+        },
+        singleDatePicker: true,
+        showDropdowns:true,
+        minYear:2000,
+        maxYear:moment().format('YYYY'),
+        timePicker: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(48,'hour')
 
-    // $('.chosen-select').chosen({max_selected_options:3})
-    // $('.chosen-select').chosen({rtl:true,max_selected_options:3})
-    $('.chosen-select').chosen().change(function(){
-        alert($(this).val())
-    })
+    },function(inicio,fin){
+        console.log(inicio.format("YYYY-MM-DD hh:mm:ss") + " - "+fin.format("YYYY-MM-DD hh:mm:ss"));
+    });
 
 
 });
+
+//https://www.daterangepicker.com/
 
 
